@@ -10,7 +10,7 @@ pipeline  {
 
 		   	steps {
 
-		   	 #git poll: true, url:'https://github.com/gdemangel/Jenkins_aws.git'
+		   	  git poll: true, url:'https://github.com/gdemangel/Jenkins_aws.git'
 		   	
 		   	}
 
@@ -22,7 +22,7 @@ pipeline  {
 
 		   		   sh *** 
 
-		   			   bash -c "virtualenv entorno_virtual && source entorno_virtual/bin/activate"
+		   			   #bash -c "virtualenv entorno_virtual && source entorno_virtual/bin/activate"
 
 		   		   ***
 
@@ -36,7 +36,7 @@ pipeline  {
 
                	   sh *** 
 
-               	   			bash -c "source $(WORKSPACE)/entorno_virtual/bin/activate && (WORKSPACE)/entorno_virtual/bin/python $(WORKSPACE)entorno_virtual/bin/pip install -r requirements.txt"               	   			
+               	   			#bash -c "source $(WORKSPACE)/entorno_virtual/bin/activate && (WORKSPACE)/entorno_virtual/bin/python $(WORKSPACE)entorno_virtual/bin/pip install -r requirements.txt"               	   			
 
                	   ***
 
@@ -51,7 +51,7 @@ pipeline  {
 
 		   	   		sh *** 
 
-		   	   				bash -c "source $(WORKSPACE)/entorno_virtual/bin/activate && cd src && $(WORKSPACE)/entorno_virtual/bin/python $(WORKSPACE)/entorno_virtual/bin/pytest && cd .. "		   	   		
+		   	   				#bash -c "source $(WORKSPACE)/entorno_virtual/bin/activate && cd src && $(WORKSPACE)/entorno_virtual/bin/python $(WORKSPACE)/entorno_virtual/bin/pytest && cd .. "		   	   		
 
 		   	   		***
 
@@ -65,7 +65,7 @@ pipeline  {
 
 		   	   		sh *** 
 
-		   	   				bash -c "source entorno_virtual/bin/activate ; $(WORKSPACE)/entorno_virtual/bin/python src/main.py &"
+		   	   				#bash -c "source entorno_virtual/bin/activate ; $(WORKSPACE)/entorno_virtual/bin/python src/main.py &"
 
 		   	   		***
 		   
@@ -79,7 +79,7 @@ pipeline  {
 
 		   	   	   sh *** 
 
-		   	   	   			docker build -t apptest:latest .
+		   	   	   			#docker build -t apptest:latest .
 
 		   	   	   ***
 
@@ -93,9 +93,9 @@ pipeline  {
 
 		   	   	   sh *** 
 
-		   	   	   			docker tag apptest:latest ubuntu/apptest:latest 
-		   	   	   							docker push ubuntu/apptest:latest 
-		   	   	   							docker rmi apptest:latest
+		   	   	   			#docker tag apptest:latest ubuntu/apptest:latest 
+		   	   	   			#				docker push ubuntu/apptest:latest 
+		   	   	   			#				docker rmi apptest:latest
 	
 		   	   	   ***
 
