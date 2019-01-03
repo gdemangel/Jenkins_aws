@@ -65,7 +65,7 @@ pipeline  {
 
 		   	   		sh '''
 
-		   	   				 bash -c "source entorno_virtual/bin/activate ; $(WORKSPACE)/entorno_virtual/bin/python src/main.py &"
+		   	   				 bash -c "entorno_virtual/bin/python src/main.py &"
 
 		   	   		'''
 		   
