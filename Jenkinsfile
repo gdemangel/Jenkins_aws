@@ -36,7 +36,7 @@ pipeline  {
 
                	   sh '''
 
-               	   			bash -c "source /entorno_virtual/bin/activate && /entorno_virtual/bin/python && entorno_virtual/bin/pip install -r requirements.txt"               	   			
+               	   			bash -c "entorno_virtual/bin/pip install -r requirements.txt"               	   			
 
                	   '''
 
