@@ -6,19 +6,19 @@ pipeline  {
 
 	stages {
 
-		   stage('Checkout repositorio git'){
+		   stage('Checkout repositorio git') {
 
-		   	steps{
+		   	steps {
 
-		   	 git poll: true, url:'https://github.com/gdemangel/Jenkins_aws.git'
+		   	 #git poll: true, url:'https://github.com/gdemangel/Jenkins_aws.git'
 		   	
 		   	}
 
 		   }
 
-		   stage('Crear ambiente virtual '){
+		   stage('Crear ambiente virtual ') {
 
-		   	   steps{
+		   	   steps { 
 
 		   		   sh *** 
 
@@ -30,9 +30,9 @@ pipeline  {
 
 		   }
 
-		   stage('Instalar requerimientos'){
+		   stage('Instalar requerimientos') {
                
-               steps{
+               steps {
 
                	   sh *** 
 
@@ -44,10 +44,10 @@ pipeline  {
 
 		   } 
 
-		   stage('Testear app'){
+		   stage('Testear app') {
 
 
-		   	   steps{
+		   	   steps {
 
 		   	   		sh *** 
 
@@ -59,9 +59,9 @@ pipeline  {
 
 		   } 
 
-		   stage('Correr aplicacion'){
+		   stage('Correr aplicacion') {
 
-		   	   steps{
+		   	   steps {
 
 		   	   		sh *** 
 
@@ -73,9 +73,9 @@ pipeline  {
 		   
 		   }
 
-		   stage('Build Docker Img'){
+		   stage('Build Docker Img') {
 
-		   	   steps{
+		   	   steps {
 
 		   	   	   sh *** 
 
@@ -87,9 +87,9 @@ pipeline  {
 
 		   }
 
-		   stage('Push Docker Img'){
+		   stage('Push Docker Img') {
 
-		   	   steps{
+		   	   steps {
 
 		   	   	   sh *** 
 
