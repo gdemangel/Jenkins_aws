@@ -93,7 +93,7 @@ pipeline  {
 
 		   	   	   sh ''' 
 
-		   	   	   			docker tag apptest:latest ubuntu/apptest:latest 
+		   	   	   			docker tag apptest:latest gdemangel/apptest:latest 
 		   	   	   							docker push ubuntu/apptest:latest 
 		   	   	   							docker rmi apptest:latest
 	
