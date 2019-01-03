@@ -1,5 +1,5 @@
 // comment 
-
+#!/bin/bash 
 pipeline  {
 
 	agent any
