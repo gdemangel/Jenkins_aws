@@ -92,10 +92,10 @@ pipeline  {
 		   	   steps {
 
 		   	   	   sh ''' 
-
-		   	   	   			docker tag apptest:latest gdemangel/apptest:latest 
-		   	   	   							docker push ubuntu/apptest:latest 
-		   	   	   							docker rmi apptest:latest
+		   	   	   			
+							docker tag apptest:latest gdemangel/apptest:latest
+											docker push gdemangel/apptest:latest
+											docker rmi apptest:latest
 	
 		   	   	   '''
 
