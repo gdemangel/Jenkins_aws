@@ -97,7 +97,7 @@ pipeline  {
 		   	   	   							docker push ubuntu/apptest:latest 
 		   	   	   							docker rmi apptest:latest
 	
-		   	   	   
+		   	   	   '''
 
 		   	   }
 
