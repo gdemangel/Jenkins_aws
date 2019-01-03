@@ -51,7 +51,7 @@ pipeline  {
 
 		   	   		sh '''
 
-		   	   				bash -c "pytest"		   	   		
+		   	   				bash -c "entorno_virtual/bin/pytest"		   	   		
 
 		   	   		'''
 
