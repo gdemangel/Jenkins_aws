@@ -10,7 +10,7 @@ pipeline  {
 
 		   	steps {
 
-		   	 #git poll: true, url:'https://github.com/gdemangel/Jenkins_aws.git'
+		   	  git poll: true, url:'https://github.com/gdemangel/Jenkins_aws.git'
 		   	
 		   	}
 
